@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Ago-2024 às 21:17
+-- Tempo de geração: 22-Ago-2024 às 23:31
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.0.19
 
@@ -24,6 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `tbamigos`
+--
+
+CREATE TABLE `tbamigos` (
+  `codigo` int(11) NOT NULL,
+  `amigo` varchar(90) DEFAULT NULL,
+  `apelido` varchar(90) DEFAULT NULL,
+  `email` varchar(90) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tbamigos`
+--
+
+INSERT INTO `tbamigos` (`codigo`, `amigo`, `apelido`, `email`) VALUES
+(1, 'Fefeco', 'fefe', 'fe@jesus.com'),
+(2, 'Lucas', 'Luke', 'luke@email.com');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `tbprodutos`
 --
 
@@ -39,11 +60,18 @@ CREATE TABLE `tbprodutos` (
 --
 
 INSERT INTO `tbprodutos` (`codigo`, `produto`, `fabricante`, `valor`) VALUES
-(12, 'Gaita', 'Yamaha', '50');
+(12, 'Gaita', 'Yamaha', '50'),
+(14, 'Prestobarba', 'Gillete', '10');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `tbamigos`
+--
+ALTER TABLE `tbamigos`
+  ADD PRIMARY KEY (`codigo`);
 
 --
 -- Índices para tabela `tbprodutos`
@@ -56,10 +84,16 @@ ALTER TABLE `tbprodutos`
 --
 
 --
+-- AUTO_INCREMENT de tabela `tbamigos`
+--
+ALTER TABLE `tbamigos`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de tabela `tbprodutos`
 --
 ALTER TABLE `tbprodutos`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

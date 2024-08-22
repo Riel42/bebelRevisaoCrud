@@ -31,6 +31,12 @@
         <a href="view/produto/telaconsultanome.php">Consultar</a> |
         <a href="">Alterar</a> |
         <a href="">Excluir</a>
+
+        <h1>Cadastrar amigos</h1>
+        <a href="view/amigo/telacadastraramigos.php">Cadastrar</a> |
+        <a href="view/amigo/telaconsultanomeamigo.php">Consultar</a> |
+        <a href="">Alterar</a> |
+        <a href="">Excluir</a>
     </main>
     <footer>
 

@@ -20,7 +20,7 @@
 <body>
 <a href="../../index.php" style="color: red; text-decoration: none">Voltar para o index</a>
     <hr>
-    <form action="../../model/produto/consultanome.php" method="POST">
+    <form action="../../model/amigos/consultanome.php" method="POST">
         <label for="">Digite o nome do usuário:</label><br>
         <input type="text" name="cxpesquisa" id="">
 

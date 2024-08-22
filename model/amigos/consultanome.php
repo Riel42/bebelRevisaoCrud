@@ -21,26 +21,26 @@
     <?php 
         include_once "../../factory/conexao.php";
         $pesquisa = $_POST["cxpesquisa"];
-        $consulta = "select * from tbprodutos where produto = '$pesquisa'";
+        $consulta = "select * from tbamigos where amigo = '$pesquisa'";
         $executar = mysqli_query($caminho, $consulta);
         $linha = mysqli_fetch_array($executar);
         if($linha){
     ?>
-    <label for="">Produto:</label> <br>
-    <input type="text" value="<?php echo $linha["produto"]?>"><br>
+    <label for="">Nome:</label> <br>
+    <input type="text" value="<?php echo $linha["amigo"]?>"><br>
 
-    <label for="">Fabricante</label> <br>
-    <input type="text" value="<?php echo $linha["fabricante"]?>"><br>
+    <label for="">Apelido</label> <br>
+    <input type="text" value="<?php echo $linha["apelido"]?>"><br>
 
-    <label for="">Valor:</label> <br>
-    <input type="text" value="<?php echo $linha["valor"]?>"><br>
+    <label for="">E-mail:</label> <br>
+    <input type="text" value="<?php echo $linha["email"]?>"><br>
     <?php } else{
         echo "<script>
             alert('Dados não encontrados!');
-            window.location.href = '../../view/produto/telaconsultanome.php';
+            window.location.href = '../../view/amigo/telaconsultanomeamigo.php';
         </script>";
     }?>
     <a href="">Alterar</a> |
-    <a href="excluirproduto.php?produto=<?php echo $pesquisa?>">Excluir</a>
+    <a href="excluiramigo.php?nome=<?php echo $pesquisa?>">Excluir</a>
 </body>
 </html>
